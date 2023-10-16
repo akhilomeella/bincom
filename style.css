@@ -1,0 +1,126 @@
+* {
+  font-family: "Manrope", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(20, 51, 77);
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding: 0 10%;
+}
+
+.text {
+  max-width: 800px;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  margin: 20px 0 40px;
+}
+
+.images {
+  margin-left: 30px;
+  padding: 20px;
+}
+
+img {
+  width: 30em;
+  height: 30em;
+  border-radius: 10%;
+}
+
+.icons {
+  position: absolute;
+  bottom: 30%;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgb(151, 176, 224);
+  z-index: -1;
+  transition: 0.3s;
+}
+
+a:hover::before {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1300px) {
+  .icons {
+    bottom: 10%;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    margin: 10px 0 30px;
+  }
+
+  .img {
+    padding: 20px;
+    margin-left: 0;
+  }
+
+  img {
+    width: 20em;
+    height: 20em;
+  }
+}
