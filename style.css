@@ -6,8 +6,9 @@
 }
 
 body {
-  background-color: rgb(20, 51, 77);
+  background-color: rgb(21, 69, 108);
   color: #fff;
+  position: relative;
 }
 
 .container {
@@ -15,6 +16,64 @@ body {
   align-items: center;
   height: 100vh;
   padding: 0 10%;
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+nav {
+  border: none;
+  background-color: rgb(21, 69, 108);
+  text-align: center;
+  width: 100vw;
+  height: 5em;
+  color: #fff;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 2em 0 0 10em;
+  text-align: center;
+}
+
+.zone {
+  cursor: pointer;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  transition: all 0.3s linear;
+}
+
+.zone:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px,
+    inset rgba(0, 0, 0, 0.5) 0px -10px 20px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px,
+    inset rgba(0, 0, 0, 0.5) 0px -10px 20px;
+  -o-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px,
+    inset rgba(0, 0, 0, 0.5) 0px -10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px,
+    inset rgba(0, 0, 0, 0.5) 0px -10px 20px;
+}
+
+.stickyNav {
+  position: sticky;
+  z-index: 9;
+  top: 0vh;
+  transition: 1s;
+}
+
+.sticky {
+  position: fixed;
+  background-color: #fff;
+  color: #000;
+  border: none;
 }
 
 .text {
@@ -50,13 +109,13 @@ img {
 
 .icons {
   position: absolute;
-  bottom: 30%;
+  bottom: 26%;
   width: 170px;
   display: flex;
   justify-content: space-between;
 }
 
-a {
+.social {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -73,11 +132,11 @@ a {
   overflow: hidden;
 }
 
-a:hover {
+.social:hover {
   cursor: pointer;
 }
 
-a::before {
+.social::before {
   content: "";
   position: absolute;
   top: 0;
@@ -89,17 +148,18 @@ a::before {
   transition: 0.3s;
 }
 
-a:hover::before {
+.social:hover::before {
   width: 100%;
 }
 
-@media only screen and (max-width: 1300px) {
-  .icons {
-    bottom: 10%;
-  }
+/* .footer {
+  background-color: #fff;
+  height: 5em;
+} */
 
+@media (max-width: 600px) {
   .container {
-    width: 100%;
+    padding: 0 5%;
   }
 
   h1 {
@@ -111,16 +171,35 @@ a:hover::before {
   }
 
   p {
-    margin: 10px 0 30px;
+    font-size: 12px;
   }
 
-  .img {
-    padding: 20px;
-    margin-left: 0;
+  ul {
+    margin: 3em 0 0 2em;
   }
 
   img {
-    width: 20em;
-    height: 20em;
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 5%;
+  }
+
+  ul {
+    margin: 3em 0 0 2em;
+  }
+
+  .images {
+    margin-left: 0;
+    padding: 0;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
   }
 }
